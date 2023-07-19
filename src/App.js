@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Comp1 from './Comp1';
+import Comp2 from './Comp2';
+import Input from './Input';
+//when we want to apply same logic to multiple component
+
+
 
 function App() {
+
+
+  const showVALUE=(value)=>{
+    return <>
+    the value is {value}
+    </>
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   
+   <Comp1 hello={"hello"}  />   
+   <Comp2/>
+
+
+   <Input 
+   renderTextBelow={
+    showVALUE
+   }
+  
+   />
+   </>
+   
   );
 }
 
